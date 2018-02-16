@@ -1,0 +1,143 @@
+/* colorGame.css
+Cynthia Hom
+7/23/17
+css stylesheet for a game in which
+user guesses which color is the 
+displayed RGB color
+
+Concepts: DOM manipulation
+	1. Using JS, CSS, HTML together!!
+	2. JS events;
+*/
+
+
+
+/* change h1 properties*/
+h1
+{
+	color: white;
+	text-align: center; /*center text*/
+	
+	/*make lines closer together vertically*/
+	line-height: 1.1;	
+
+	background: steelblue;
+	  /*no room around h1 */
+	margin: 0;
+
+	/*default font is bold, make the font weight
+	lighter */
+	font-weight: normal;  
+	text-transform: uppercase;
+	padding: 20px 0;
+}
+
+/* body background color black */
+body
+{
+	/*black */
+	background-color: #232323;
+	
+
+	/*no gap between body and edges of page */
+	margin: 0; 
+
+	/*set font */
+	font-family: "Montserrat", "Avenir";
+
+}
+
+/*each square takes up 30% of the width of
+container*/
+.square
+{
+	/* width is 30%, margin 1.66%, 
+	total is 100% of container */
+	width: 30%;
+	margin: 1.66%;
+	/* color of square */
+	background: purple;
+	/* space because divs are empty-
+	need some content */
+	padding-bottom: 30%;
+	/* so that divs are not all
+	in one column */
+	float: left;
+	border-radius: 15%;
+	transition: background 0.6s;
+	--webkit-transiton: background 0.6s;
+	-moz-transition: background 0.6s;
+}
+
+/* select container of the color 
+grid */
+#container
+{
+	/* make grid smaller- won't
+	take up whole page */
+	max-width: 600px;
+	/* a bit of margin on top/bottom, 
+	make left/right responsive to screen */
+	margin: 20px auto;
+}
+/* RGB value in h1*/
+#colorDisplay
+{
+	font-size: 200%;
+}
+
+/* span on the white bar - Correct/incorrect*/
+#message
+{
+	/*make it take up space
+	even when empty */
+	display: inline-block;
+	width: 20%;
+}
+
+/*change the stripe across the screen's 
+characteristics*/
+#stripe
+{
+	background: white;
+	height: 30px;
+	text-align: center;
+	color: black;
+}
+
+/* class for easy/hard buttons's appearance
+when they are selected */
+.selected
+{
+	color: white;
+	background: steelblue;
+}
+
+button
+{
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	/*take up 100% of parent element*/
+	height: 100%;
+
+	/*change font weight/color*/
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;
+	/* inherit from body */
+	font-size: inherit; 
+}
+
+/* change button's appearance when 
+hovered over */
+button:hover
+{
+	color: white;
+	background: steelblue;
+	transition: all 0.3s;
+	--webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	/*take out automatice blue outline from browser*/
+	outline: none;
+}

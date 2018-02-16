@@ -1,0 +1,53 @@
+<!-- colorGame.html 
+Cynthia Hom
+7/23/17
+HTML for game based on RGB color system
+User picks the color that matches the 
+numbers for RGB
+
+Concepts: DOM manipulation
+	1. Using JS, CSS, HTML together!!
+	2. JS events;
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Game</title>
+	<!-- link to stylesheet -->
+	<link rel="stylesheet" type="text/css" href="colorGame.css">
+</head>
+<body>
+
+<!-- span/id allows us to select and manipulate the RGB values of the chosen color -->
+<!-- br tags make RGB on a new line -->
+<h1>The Great 
+<br>
+<span id="colorDisplay">RGB</span> 
+<br>
+Color Game</h1>
+
+<!-- div for the bar that has "easy/hard", new colors, and try again/correct messages -->
+<div id="stripe">
+	<!-- reset button -->
+	<button id="reset">New Colors</button>
+	<span id="message"></span>
+	<!-- easy/hard buttons -->
+	<button class="mode">Easy</button>
+	<button class="mode selected">Hard</button>
+</div>
+
+<!-- divs for the squares -->
+	<div id="container">
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+		<div class="square"></div>
+	</div>
+
+<!-- link to script  -->
+<script type="text/javascript" src="colorGame.js"></script>
+</body>
+</html>
